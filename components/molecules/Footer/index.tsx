@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="hidden md:flex flex-col w-3/4 gap-12 justify-between">
-        <div className="flex w-full justify-around">
+        <div className="flex w-full justify-around gap-4">
           <div className="w-full flex flex-col gap-1">
             <h1 className="font-bold text-white sm:text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px]">
               Social
@@ -42,7 +42,7 @@ const Footer = () => {
             <ListMenuFooter items={companyItems} />
           </div>
         </div>
-        <div className="flex w-full justify-around">
+        <div className="flex w-full justify-around gap-4">
           <div className="w-full flex flex-col gap-1">
             <h1 className="font-bold text-white sm:text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px]">
               Press
