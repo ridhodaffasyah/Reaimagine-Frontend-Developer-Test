@@ -5,3 +5,7 @@ export interface ButtonProps {
 export interface LayoutProps {
     children: React.ReactNode;
 };
+
+export interface ListMenuProps {
+    items: Array<{name: string; link: string}>;
+};
