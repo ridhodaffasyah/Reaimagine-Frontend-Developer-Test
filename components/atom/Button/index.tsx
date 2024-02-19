@@ -22,7 +22,7 @@ const Button = ({ text }: ButtonProps) => {
             ? "px-8 sm:px-12"
             : "px-4 sm:px-6"
         }
-        py-1 sm:py-2 rounded-3xl w-auto font-medium tracking-wide text-[9px] sm:text-[12px] lg:text-[14px] xl:text-[16px]`}
+        py-1 sm:py-2 rounded-3xl w-auto font-medium tracking-wide text-[9px] sm:text-[10px] lg:text-[14px] xl:text-[16px]`}
     >
       {text}
     </button>

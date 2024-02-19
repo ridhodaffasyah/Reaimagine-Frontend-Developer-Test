@@ -4,7 +4,7 @@ import { items } from "@/utils/constants";
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-col sm:flex-row gap-4 md:gap-0 sticky top-0 items-center justify-between border-2 border-black w-full p-4">
+    <nav className="absolute z-2 flex flex-col sm:flex-row gap-4 md:gap-0 bg-white top-0 items-center justify-between w-full py-4 px-12">
       <div className="flex items-center gap-3">
         <Image
           src="/assets/reaimagine-logo.png"

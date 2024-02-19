@@ -9,3 +9,7 @@ export interface LayoutProps {
 export interface ListMenuProps {
     items: Array<{name: string; link: string}>;
 };
+
+export interface ContainerImageProps {
+    src: string;
+};

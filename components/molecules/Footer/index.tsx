@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 w-full bg-sky-900 p-6 md:p-14 pr-0 flex gap-24 justify-between">
+    <footer className="w-full bg-sky-900 p-6 md:p-14 pr-0 flex gap-24 justify-between">
       <div className="w-5/6 flex flex-col justify-between">
         <div className="flex items-center gap-3">
           <Image

@@ -6,9 +6,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 const Layout = ({children}: LayoutProps) => {
     return (
-        <div className={`flex flex-col gap-2 ${inter.className}`}>
+        <div className={`flex flex-col ${inter.className}`}>
             <Navbar/>
-            <main className='px-4'>
+            <main>
                 {children}
             </main>
             <Footer />
