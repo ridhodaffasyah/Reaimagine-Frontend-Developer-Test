@@ -13,9 +13,17 @@ const FAQSection = () => {
         {FAQItems.map((item, index) => (
           <ListFAQ key={index} question={item.question} answer={item.answer} />
         ))}
-        <Link href="#" className="mt-6 flex items-center gap-3 underline text-[14px] md:text-[16px]">
-                  More FAQs
-        <Image src="/assets/right-arrow.png" alt="right-arrow" width={17} height={5} />
+        <Link
+          href="#"
+          className="mt-6 flex items-center gap-3 underline text-[14px] md:text-[16px]"
+        >
+          More FAQs
+          <Image
+            src="/assets/right-arrow.png"
+            alt="right-arrow"
+            width={17}
+            height={5}
+          />
         </Link>
       </div>
     </section>

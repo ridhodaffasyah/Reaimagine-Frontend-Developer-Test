@@ -23,7 +23,7 @@ const Login = () => {
 
     if (token) {
       router.push("/profile");
-    } 
+    }
   }, []);
 
   const login = async () => {
@@ -68,10 +68,19 @@ const Login = () => {
         <Circles isLoginRegPath isProfile={false} />
         <div className="flex flex-col-reverse items-center mb-12 gap-4">
           <h1 className="text-2xl md:text-4xl font-medium text-black tracking-wide">
-          Welcome back
+            Welcome back
           </h1>
-          <Link href="/" className="flex gap-2 items-center hover:underline text-[10px] md:text-[14px]">
-            <Image src="/assets/left-arrow.png" alt="left-arrow" width={20} height={20} className="w-[15px] h-[15px] md:w-[20px] md:h-[20px]" />
+          <Link
+            href="/"
+            className="flex gap-2 items-center hover:underline text-[10px] md:text-[14px]"
+          >
+            <Image
+              src="/assets/left-arrow.png"
+              alt="left-arrow"
+              width={20}
+              height={20}
+              className="w-[15px] h-[15px] md:w-[20px] md:h-[20px]"
+            />
             Back
           </Link>
         </div>

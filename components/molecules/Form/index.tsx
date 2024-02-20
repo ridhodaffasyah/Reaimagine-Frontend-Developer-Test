@@ -30,7 +30,7 @@ const Form = ({
       )}
       <Link
         className="text-end underline font-medium text-[13px]"
-        href="/signup"
+        href="/forgot"
       >
         Forgot password?
       </Link>
