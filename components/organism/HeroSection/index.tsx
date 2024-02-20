@@ -8,9 +8,9 @@ const local: any = localFont({
   variable: "--gelato-font",
 });
 
-const Hero = () => {
+const HeroSection = () => {
   return (
-    <div className="flex justify-between px-6 md:pl-12 lg:pl-24 md:pr-12 pb-0 bg-zinc-50 gap-16">
+    <section className="flex justify-between px-6 md:pl-12 lg:pl-24 md:pr-12 pb-0 bg-zinc-50 gap-16">
       <div className="flex flex-col gap-4 items-center w-full lg:w-5/12 md:items-start mt-32 md:mt-52 lg:mt-72">
         <h1
           className={`${local.className} text-[20px] md:text-[30px] xl:text-[80px]`}
@@ -45,8 +45,8 @@ const Hero = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Hero;
+export default HeroSection;
