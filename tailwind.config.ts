@@ -13,6 +13,20 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        circles: {
+          "0%": {
+            transform: "translateY(0) rotate(0deg)",
+            opacity: "1",
+            borderRadius: "10%",
+          },
+          "100%": {
+            transform: "translateY(-1000px) rotate(720deg)",
+            opacity: "0",
+            borderRadius: "100%",
+          },
+        },
+      },
     },
   },
   plugins: [],

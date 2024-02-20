@@ -1,8 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import { EmblaCarousel } from "@/components/molecules";
 import Link from "next/link";
-import { EmblaOptionsType } from "embla-carousel";
+import Image from "next/image";
 import { useRouter } from "next/router";
+import { EmblaCarousel, Form, Circles } from "@/components/molecules";
+import { EmblaOptionsType } from "embla-carousel";
 
 const OPTIONS: EmblaOptionsType = { align: "center", containScroll: false };
 const SLIDE_COUNT = 6;
@@ -21,9 +23,7 @@ const Login = () => {
 
     if (token) {
       router.push("/profile");
-    } else {
-      router.push("/");
-    }
+    } 
   }, []);
 
   const login = async () => {
@@ -34,7 +34,6 @@ const Login = () => {
         body: JSON.stringify({
           username: email,
           password: password,
-          // expiresInMins: 60, // optional
         }),
       });
       // Save the token in local storage
@@ -64,55 +63,31 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center max-h-screen bg-white py-32 md:py-0">
-      <div className="flex flex-col items-center justify-center w-full gap-4">
-        <h1 className="text-2xl md:text-4xl font-medium text-black tracking-wide mb-12">
+    <section className="flex items-center justify-center max-h-screen bg-white py-32 md:py-0">
+      <div className="flex flex-col items-center justify-center w-full  gap-4 z-[2]">
+        <Circles isLoginRegPath isProfile={false} />
+        <div className="flex flex-col-reverse items-center mb-12 gap-4">
+          <h1 className="text-2xl md:text-4xl font-medium text-black tracking-wide">
           Welcome back
-        </h1>
-        <div className="flex flex-col gap-4 w-64 md:w-96">
-          <input
-            type="email"
-            placeholder="Email"
-            className="border-2 border-gray-300 rounded-lg px-4 py-2"
-            value={email}
-            onChange={handleEmail}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="border-2 border-gray-300 rounded-lg px-4 py-2"
-            value={password}
-            onChange={handlePassword}
-          />
-          {error && (
-            <p className="text-red-500 text-[13px]">
-              Invalid email or password
-            </p>
-          )}
-          <Link
-            className="text-end underline font-medium text-[13px]"
-            href="/signup"
-          >
-            Forgot password?
+          </h1>
+          <Link href="/" className="flex gap-2 items-center hover:underline text-[10px] md:text-[14px]">
+            <Image src="/assets/left-arrow.png" alt="left-arrow" width={20} height={20} className="w-[15px] h-[15px] md:w-[20px] md:h-[20px]" />
+            Back
           </Link>
-          <button
-            onClick={login}
-            className="bg-black text-white hover:bg-slate-800 rounded-lg py-2 sm:py-4"
-          >
-            Log in
-          </button>
-          <span className="text-[13px]">
-            Don&apos;t have an account?{" "}
-            <Link className="underline font-bold" href="/signup">
-              Sign up
-            </Link>
-          </span>
         </div>
+        <Form
+          email={email}
+          password={password}
+          error={error}
+          login={login}
+          handleEmail={handleEmail}
+          handlePassword={handlePassword}
+        />
       </div>
       <div className="w-3/4 hidden md:flex items-center">
         <EmblaCarousel slides={SLIDES} options={OPTIONS} isLogin />
       </div>
-    </div>
+    </section>
   );
 };
 

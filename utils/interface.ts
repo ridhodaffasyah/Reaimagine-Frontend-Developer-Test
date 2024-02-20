@@ -26,3 +26,12 @@ export interface ListFAQProps {
     question: string;
     answer: string;
 };
+
+export interface FormProps {
+    email: string;
+    password: string;
+    error: boolean;
+    login: () => void;
+    handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    handlePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};

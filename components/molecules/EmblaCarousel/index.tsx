@@ -6,6 +6,7 @@ import Autoplay from "embla-carousel-autoplay";
 import ClassNames from "embla-carousel-class-names";
 import imageByIndex from "@/utils/imageByIndex";
 import textByIndex from "@/utils/textByIndex";
+import Image from "next/image";
 
 type PropType = {
   slides: number[];
@@ -108,7 +109,27 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                       </div>
                     </div>
                   </div>
-                ) : null}
+                ) : (
+                  <div className="absolute px-4 py-4 flex flex-col justify-end gap-6 w-full h-full">
+                    <div className="flex gap-1 md:gap-3 w-full items-center">
+                      <Image
+                        src="/assets/profile.png"
+                        alt="profile-raka"
+                        width={35}
+                        height={35}
+                        className="w-[20px] h-[20px] md:w-[35px] md:h-[35px]"
+                      />
+                      <div>
+                        <h1 className="font-semibold text-[8px] md:text-[14px] text-white">
+                          Raka Home
+                        </h1>
+                        <p className="font-semibold text-[6px] md:text-[12px] text-white">
+                          Purwokerto
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
