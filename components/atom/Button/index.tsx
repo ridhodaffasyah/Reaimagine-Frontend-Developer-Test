@@ -1,6 +1,13 @@
 import { ButtonProps } from "@/utils/interface";
+import { useRouter } from "next/router";
 
-const Button = ({ text }: ButtonProps) => {
+const Button = ({ text, route }: ButtonProps) => {
+  const router = useRouter();
+
+  const handleRoute = (route: string) => {
+    router.push(`/${route}`);
+  };
+
   return (
     <button
       className={`${
@@ -42,6 +49,7 @@ const Button = ({ text }: ButtonProps) => {
             : "px-4 sm:px-6"
         }
         py-1 sm:py-2 rounded-3xl w-auto font-medium tracking-wide text-[9px] sm:text-[10px] lg:text-[14px] xl:text-[16px]`}
+      onClick={() => handleRoute(route)}
     >
       {text}
     </button>

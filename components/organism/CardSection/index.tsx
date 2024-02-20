@@ -20,7 +20,7 @@ const CardSection = () => {
         ))}
       </div>
       <div>
-        <Button text="See the details" />
+        <Button text="See the details" route="details"/>
       </div>
     </section>
   );

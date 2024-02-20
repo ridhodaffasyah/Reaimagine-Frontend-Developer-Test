@@ -13,7 +13,7 @@ const CarouselSection = () => {
         <h1 className="text-[14px] md:text-[24px] xl:text-[32px] font-medium">
           Lorem ipsum dolor sit amet consectetur. Cras id in quis.
         </h1>
-        <Button text="Lorem" />
+        <Button text="Lorem" route="#"/>
       </div>
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
     </section>

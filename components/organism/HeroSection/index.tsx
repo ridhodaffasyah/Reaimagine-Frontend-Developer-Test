@@ -24,7 +24,7 @@ const HeroSection = () => {
           Neque odio nulla semper purus facilisis
         </h2>
         <div className="flex gap-4 items-center">
-          <Button text="Apply now" />
+          <Button text="Apply now" route="login"/>
           <Link
             href="#"
             className="text-[10px] md:text-[10px] lg:text-[12px] xl:text-[14px]"

@@ -1,8 +1,15 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { Button, ListMenuNavbar } from "@/components/atom";
 import { items } from "@/utils/constants";
 
 const Navbar = () => {
+  const router = useRouter();
+
+  const handleRoute = (route: string) => {
+    router.push(route);
+  };
+
   return (
     <nav className="absolute z-2 flex flex-col sm:flex-row gap-4 md:gap-0 bg-white top-0 items-center justify-between w-full py-4 px-12">
       <div className="flex items-center gap-3">
@@ -19,8 +26,8 @@ const Navbar = () => {
       </div>
       <ListMenuNavbar items={items} />
       <div className="flex gap-2">
-        <Button text="Sign up" />
-        <Button text="Login" />
+        <Button text="Sign up" route="signup" />
+        <Button text="Login" route="login"/>
       </div>
     </nav>
   );

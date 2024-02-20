@@ -1,5 +1,6 @@
 export interface ButtonProps {
     text: string;
+    route: string;
 };
 
 export interface LayoutProps {
