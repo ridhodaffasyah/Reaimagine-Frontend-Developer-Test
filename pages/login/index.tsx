@@ -36,9 +36,11 @@ const Login = () => {
           password: password,
         }),
       });
-      // Save the token in local storage
+      // Save the token in local storage if it is defined
       const data = await response.json();
-      localStorage.setItem("token", data.token);
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+      }
       if (response.ok) {
         // Redirect to "/profile" after successful login
         router.push("/profile");
