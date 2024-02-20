@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.embla-login {
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+  --slide-height: 100vh;
+}
+
 .embla {
   --slide-spacing: 1rem;
   --slide-size: 60%;
@@ -28,6 +34,13 @@
   height: var(--slide-height);
   width: 100%;
   object-fit: cover;
+}
+.embla__slide__img-login {
+  display: block;
+  height: var(--slide-height);
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.6;
 }
 .embla__slide__number {
   width: 4.6rem;
