@@ -20,3 +20,8 @@ export interface CardProps {
     image: string;
     index: number;
 };
+
+export interface ListFAQProps {
+    question: string;
+    answer: string;
+};

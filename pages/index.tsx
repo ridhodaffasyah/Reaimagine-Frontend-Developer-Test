@@ -1,5 +1,10 @@
 import Layout from "@/components/layout";
-import { HeroSection, CarouselSection, CardSection } from "@/components/organism";
+import {
+  HeroSection,
+  CarouselSection,
+  CardSection,
+  FAQSection
+} from "@/components/organism";
 
 const Home = () => {
   return (
@@ -7,6 +12,7 @@ const Home = () => {
       <HeroSection />
       <CarouselSection />
       <CardSection />
+      <FAQSection />
     </Layout>
   );
 };
